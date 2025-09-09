@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Avançadas</title>
+</head>
+<body>
+    <picture>
+        <source media="(max-width: 600px)" srcset="pequena.jpg">
+        <source media="(min-width: 601px)" srcset="grande.jpg">
+        <img src="fallback.jpg" alt="Descrição">
+    </picture>
+
+    <figure>
+        <img src="foto.jpg" alt="Paisagem">
+        <figcaption>Paisagem ao entardecer</figcaption>
+    </figure>
+
+</body>
+</html>

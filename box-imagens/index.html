@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+</head>
+<style>
+    body{
+        background-color: aliceblue;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        width: 800px;
+        height: 100vh;
+    }
+    main > .contener{
+        display: flex;
+        gap: 1px;
+    }
+    main .card{
+        background-image: url('https://cdn.pixabay.com/photo/2024/06/23/00/31/bubble-8847164_640.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        flex: 1;
+        width:200px;
+        height: 400px;
+        transition: flex 2s ease;
+        cursor: pointer;
+    }
+    main .card:hover{
+        flex: 2;
+        background-size: 400px;
+        cursor: pointer;
+        background-size: 100%;
+        background-position: 40% center;
+        transition: flex 2s ease; 
+    }
+</style>
+<body>
+    <main>
+        <div class="contener">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </main>
+</body>
+</html>

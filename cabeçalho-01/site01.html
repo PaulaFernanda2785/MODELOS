@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meu site com notícias, blog, serviços e contato.">
+    <meta name="keywords" content="notícias, blog, serviços, contato, assuntos">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>Site-01</title>
+</head>
+    <style>
+        
+        :root {
+            --cor-fundo: #ffffff ;
+            --cor-fundo-2: linear-gradient(to right, #3f597e, #4c79a6);
+            --cor-texto: #000000;
+            --cor-link: #4c79a6;
+            --cor-link-hover: #ffffff;
+            --bg-corpo: #ffffff;
+            --bg-corpo-2: linear-gradient(to right, #3f597e, #4c79a6);
+            --cor-borda: linear-gradient(to right, #3f597e, #4c79a6);
+            --cor-sombra: rgba(0, 0, 0, 0.1);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: 'TruenoRound';
+            src:url(fonte/TruenoRoundBd.otf) format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html, body {
+            font-family: 'TruenoRound', Arial, sans-serif;
+            background-image: var(--cor-fundo-2);
+            color: var(--cor-texto);
+            height: 100vh;
+            width: 800px;
+            margin: auto;
+            scroll-behavior: smooth;/* Adicionando rolagem suave */
+            transition: background-color 5s, color 5s; /* Adicionando transição suave */
+        }
+        header {
+            height: 40px;
+            width: auto;
+            margin: auto;
+            background: var(--cor-fundo-2);
+            border-bottom: 1px solid var(--cor-borda);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            box-shadow: 0 2px 4px var(--cor-sombra);
+            padding: 10px;
+            position: fixed;/* cabeçalho fixo */
+            top: 0;/* cabeçalho fixo */
+            z-index: 1000;/* cabeçalho fixo */
+            transition: background-color 0.4s, box-shadow 0.4s;/* cabeçalho fixo */
+        }
+        header.header-transparente {/* cabeçalho transparente */
+            background: hsla(210, 37%, 47%, 0.304);
+            box-shadow: 0 2px 8px rgba(80, 80, 255, 0.204);
+        }
+        .logo-container {
+            display:flex;
+            align-items: center;/* Alinha os logos verticalmente */
+            gap: 2px; /* Espaço entre os logos */
+            margin-right:auto; /* Empurra o nav para a direita */
+            margin-left: 10px; /* Empurra o nav para a direita */
+            height: 30px;
+            background-color: rgba(0, 0, 255, 0);
+        }
+        header #logo-1 {
+            height: 20px;
+            width: 6px;
+            background-color: white;
+            border-radius: 3px;
+            margin-top: 8px;
+        }
+        header #logo-2 {
+            height: 20px;
+            width: 6px;
+            background-color: white;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+        .logo-container > a > div#logo-1:hover {
+            background-color: rgba(0, 0, 255, 0.107);
+        }
+        .logo-container > a > div#logo-2:hover {
+            background-color: rgba(0, 0, 255, 0.107);
+        }
+        nav ul {
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            margin-right: 20px;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            color: var(--cor-texto);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--cor-link-hover);
+            border: 1px transparent #ffffff;
+            border-radius: 0;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a.active {
+            background-color: rgba(0, 0, 0, 0.123);
+            border-bottom: 2px solid var(--cor-link);
+            box-shadow: 0 2px 4px var(--cor-sombra);
+            border-radius: 4px;
+        }
+        main {
+            padding: 0px;
+            border-radius: 5px;
+            background-color: var(--bg-corpo);
+            box-shadow: 0 2px 4px var(--cor-sombra);
+        }
+        section {
+            background-color: var(--cor-fundo);
+            border-image: 1px solid var(--cor-borda);
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.134);
+            padding-top: 60px;
+            height: calc(100vh - 40px);
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        section#assuntos {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            border: 1px solid rgba(74, 3, 255, 0.19);
+            margin-top: 2px;
+            margin-bottom:2px;
+        }
+        section#noticias {
+            background-image: var(--cor-fundo-2);
+            color: white;
+        }
+        section#noticias > h2 {
+            color: white;
+        }
+        section#contato {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            border: 1px solid rgba(74, 3, 255, 0.19);
+            margin-top: 2px;
+            margin-bottom:2px;
+        }
+        section#blog {
+            background-image: var(--cor-fundo-2);
+            color: white;
+        }
+        section#blog > h2 {
+            color: white;
+        }
+        section#servicos {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            border: 1px solid rgba(74, 3, 255, 0.19);
+            margin-top: 2px;
+            margin-bottom:2px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: var(--cor-texto);
+        }
+        p {
+            margin-bottom: 20px;
+        }   
+        footer {
+            height: 20px;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            background-image: var(--bg-corpo-2);
+            border-top: 0 solid var(--cor-borda);
+            position: fixed;
+            bottom: 0;
+            width: auto;
+            margin: auto;
+        }
+    </style>
+<body>
+    <header>
+            <div class="logo-container">
+                    <a href="#assuntos">
+                        <div id="logo-1"></div>
+                    </a>
+                    <a href="#assuntos">
+                        <div id="logo-2"></div>
+                    </a>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="#assuntos">Assuntos</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <h2>Assuntos</h2>
+            <p>Conteúdo sobre assuntos.</p>
+        </section>
+        <section id="noticias">
+            <h2>Notícias</h2>
+            <p>Conteúdo sobre notícias.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Conteúdo sobre contato.</p>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Conteúdo sobre blog.</p>
+        </section>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Conteúdo sobre serviços.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span>2025</span> Meu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(sec => {
+                const top = window.scrollY;
+                const offset = sec.offsetTop - 80;
+                const height = sec.offsetHeight;
+                if (top >= offset && top < offset + height) {
+                    current = sec.getAttribute("id");
+                }
+            });
+            // Cabeçalho transparente
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 10) {
+                    header.classList.add('header-transparente');
+                } else {
+                    header.classList.remove('header-transparente');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+            });
+            // Atualiza o ano no rodapé automaticamente
+            const currentYear = new Date().getFullYear();
+            document.querySelector('footer span').textContent = currentYear;
+    </script>   
+</body>
+</html>

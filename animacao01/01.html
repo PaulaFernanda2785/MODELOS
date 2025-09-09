@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animação01</title>
+    <link rel="shortcut icon" href="legal.ico" type="image/x-icon">
+    <style>
+        :root{/* Definindo variáveis de cor */
+            --bg: #0b1220; /* Cor de fundo */
+            --texto: #e6f0ff; /* Cor do texto */
+            --accent: #6ef8c3; /* Cor de destaque */
+        }
+        html, body{/* Definindo estilos para html e body */
+            height: 100%;/* Altura do viewport */
+            margin: 0;/* Margem padrão */
+            font-family: 'Courier New', 'monospace';/* Fonte padrão */
+        }
+        body{
+            display: flex;/* Definindo layout flexível */
+            align-items: center;/* Alinhando itens ao centro */
+            justify-content: center;/* Justificando conteúdo ao centro */
+            background: linear-gradient(135deg,
+                #07142a 10%,
+                #0b1220 60%);
+            color: var(--texto);/* Cor do texto */
+        }
+        .wrapper{/* Definindo estilo para o wrapper */
+            width: min(880px, 92%);/* Largura máxima do wrapper */
+            text-align: left;/* Alinhamento do texto */
+            font-size: clamp(20px, 6vw, 48px);/* Tamanho da fonte */
+        }
+        .typing{/* Definindo estilo para o efeito de digitação */
+            display: inline-block;/* Impedindo quebra de linha */
+            white-space: nowrap;/* Impedindo quebra de linha */
+            overflow: hidden;/* Ocultando o texto que ultrapassa o limite */
+            border-right: 0.12em solid var(--accent);/* Cursor do efeito de digitação */
+            animation: 
+                typing 3s steps(34, end) 1s infinite alternate,
+                blink-caret 0.7s step-end infinite;/* Efeito de piscar o cursor */
+        }
+        @keyframes blink-caret{
+            from, to{border-color: transparent;}/* Impedindo quebra de linha */
+            50%{border-color: var(--accent);}/* Cor do cursor */
+        }
+        @keyframes typing{
+            from{width: 0ch;}/* Início do efeito de digitação */
+            to{width: 34ch;}/* Fim do efeito de digitação */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper"><!-- Definindo estilo para o wrapper -->
+        <div class="typing"><!-- Efeito de digitação -->
+            Seja Bem Vinda! Paula Fernanda &#x2764.
+        </div>
+    </div>
+</body>
+</html>

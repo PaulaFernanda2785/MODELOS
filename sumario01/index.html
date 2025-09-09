@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumario</title>
+    <link rel="shortcut icon" href="../animacao01/legal.ico" type="image/x-icon">
+</head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                background-image: linear-gradient(to right, #14131333, #14131333);
+                background-attachment: fixed;
+                padding: 20px;
+                line-height: 1.6;
+                margin: 2px;
+            }
+            h2 {
+                color: #000000;
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            details {
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                background-color: #f9f9f9;
+                text-align: left;
+                margin: 20px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+            details:hover {/*pseudo-classe*/
+                border-color: #999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            details[open] {
+                background-color: #e0e0e0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            summary {
+                font-weight: bold;
+                cursor: pointer;
+                outline: none;
+                list-style: symbols( '►', '▼');
+                padding: 5px;
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 12px;
+            }
+            p {
+                margin-top: 10px;
+                padding-left: 20px;
+                text-align: justify;
+                text-indent: 20px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 5px;
+            }
+            div.faq {
+                margin: 20px 0;
+                width: auto;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+            div.faq:hover {
+                border-color: #999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+<body>
+    <div class="faq">
+        <h2>Perguntas Frequentes?</h2>
+        <details>
+            <summary>O que é HTML?</summary>
+            <p>HTML (HyperText Markup Language) é a linguagem padrão para criar páginas da web.</p>
+        </details>
+        <details>
+            <summary>O que é CSS?</summary>
+            <p>CSS (Cascading Style Sheets) é a linguagem usada para descrever a apresentação de páginas da web.</p>
+        </details>
+        <details>
+            <summary>O que é JavaScript?</summary>
+            <p>JavaScript é uma linguagem de programação que permite implementar funcionalidades complexas em páginas da web.</p>
+        </details>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias Graficos</title>
+</head>
+<body>
+    <video controls width="320" poster="capa.jpg">
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <canvas id="desenho" width="200" height="100"></canvas>
+        <script>
+        const ctx = document.getElementById('desenho').getContext('2d');
+        ctx.fillStyle = 'red';
+        ctx.fillRect(10, 10, 150, 75);
+        </script>
+
+        <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="blue" />
+        </svg>
+
+</body>
+</html>
